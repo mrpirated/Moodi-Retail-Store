@@ -1,19 +1,19 @@
 import React from "react";
-import "./login.scss";
+import "../../styles/login.css";
 
 export default function Login(props) {
     return (
-        <div>
+        <div className="login_body">
             <div className="box_login">
-                <h2><u><b>Login</b></u></h2>
+                <h2><b>Login</b></h2>
                 <form>
                     <div className="inputbox_login">
                         <input type="text" name="" required=""/>
-                        <label>Username</label>
+                        <label style={{marginTop : "5px"}}>Username</label>
                     </div>
                     <div className="inputbox_login">
                         <input type="password" name="" required=""/>
-                        <label>Password</label>
+                        <label style={{ marginTop: "5px" }}>Password</label>
                     </div>
                     <input type="submit" name="" value="Submit"/>
                 </form>
