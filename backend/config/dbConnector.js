@@ -1,7 +1,8 @@
+require('dotenv').config()
 import { connect } from 'mongoose';
-const config = require('config');
+//const config = require('config');
 import { ErrorCode } from '../utils/consts';
-const db = config.get('mongoURI');
+const db = process.env.MONGO_URL
 
 const connectDB = async () => {
   try {
