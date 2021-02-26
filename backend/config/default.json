@@ -1,5 +1,4 @@
 {
-  "mongoURI": "mongodb+srv://user1:W1gJXHfPYVBKTxxB@cluster0.9a0r7.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
   "avatarBaseURI": "https://ui-avatars.com/api/?background=0D8ABC&color=fff&name=",
   "jwtSecret": "fwm349z#$()8zjfrwm43",
   "clientOrigin": "scaffold.example.com",
