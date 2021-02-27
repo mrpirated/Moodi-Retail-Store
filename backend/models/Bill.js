@@ -1,9 +1,14 @@
 import { Schema, model } from 'mongoose';
 
 const BillSchema = Schema({
+    UserId:{
+        type:String,
+        required:true
+    },
     Bill_Id:{
         type:String,
         required:true,
+        unique:true
     },
     Client_id:String, // customer or supplier id
     Items:[

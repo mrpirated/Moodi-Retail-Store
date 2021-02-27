@@ -1,9 +1,14 @@
 import { Schema, model } from 'mongoose';
 
 const CustomerSchema = Schema({
+    UserId:{
+        type:String,
+        required:true
+    },
     Customer_Id: {
         type:String,
         required:true,
+        unique:true
     },
     name: {
         type:String,

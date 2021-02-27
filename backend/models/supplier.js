@@ -1,9 +1,14 @@
 import { Schema, model } from 'mongoose';
 
 const SupplierSchema = Schema({
+    UserId:{
+        type:String,
+        required:true
+    },
     Supplier_Id: {
         type: String,
         required: true,
+        unique:true
     },
     Name: {
         type: String,

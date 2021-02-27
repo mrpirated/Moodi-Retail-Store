@@ -1,9 +1,14 @@
 import { Schema, model } from 'mongoose';
 
 const BatcheSchema = Schema({
+    UserId:{
+        type:String,
+        required:true
+    },
     Batch_Id:{
         type:String,  //used as barcode also
         required:true,
+        unique:true
     },
     ItemCode:{ 
         type:String,
