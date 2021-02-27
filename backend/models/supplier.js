@@ -29,7 +29,7 @@ const SupplierSchema = Schema({
         type: Number,
         required: true,
     },
-    Transactions: [{date:Date,}], //To be finalized
+    Transactions: [{type:String}], // Array of Transaction Ids or bill id
 });
 
 export default model('supplier',SupplierSchema);

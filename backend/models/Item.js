@@ -18,6 +18,10 @@ const ItemSchema = Schema({
     required: true,
   },
   Total_Units: { type: Number, min: 0 },
+  Weight_Volume:{
+    type:String,
+    required:true,
+  },
 
   Batches: [{ type: String }], //Array of Batch Ids
 });

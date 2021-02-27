@@ -5,6 +5,7 @@ const BillSchema = Schema({
         type:String,
         required:true,
     },
+    Client_id:String, // customer or supplier id
     Items:[
         {Batch_Id:{
             type:String,
@@ -24,10 +25,16 @@ const BillSchema = Schema({
         },  //Linked to HSN Code
         },
     ],
+    date:{
+        type:Date,
+        required:true,
+    },
+    Gst:String, //total gst
     TotalCost:{
         type:String,
         required:true,
     },
+    Mode:String //mode of payment
 
 
 });
