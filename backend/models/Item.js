@@ -1,14 +1,9 @@
 import { Schema, model } from "mongoose";
 
 const ItemSchema = Schema({
-    UserId:{
-        type:String,
-        required:true
-    },
-  ItemId: {
+  UserId: {
     type: String,
     required: true,
-    unique: true,
   },
   Name: {
     type: String,

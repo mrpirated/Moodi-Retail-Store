@@ -10,6 +10,10 @@ const BatcheSchema = Schema({
         required:true,
         unique:true
     },
+    Date:{
+        type:Date,
+        required:true
+    },
     ItemCode:{ 
         type:String,
         required:true,
