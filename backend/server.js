@@ -3,6 +3,8 @@ import connectDB from './config/dbConnector';
 import auth from './routes/api/auth';
 import itemdetails from './routes/itemdetails';
 import addbatch from './routes/addbatches';
+import customerdetails from './routes/customerdetails';
+import supplierdetails from './routes/supplierdetails';
 import config from 'config';
 import cors from 'cors';
 
@@ -27,6 +29,8 @@ app.get('/', (req, res) => {
 app.use('/api/user', auth);
 app.use('/user/details',itemdetails);
 app.use('/user',addbatch);
+app.use('/user/customer',customerdetails);
+app.use('/user/supplier',supplierdetails);
 
 app.listen(PORT, () => {
   console.log('Go!');
