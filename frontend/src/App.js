@@ -1,5 +1,5 @@
 import React from "react";
-import Login from "./components/login/Login.jsx";
+import Login from "./components/login/login.jsx";
 import "./App.css";
 import Home from "./components/Home/Home.jsx";
 
