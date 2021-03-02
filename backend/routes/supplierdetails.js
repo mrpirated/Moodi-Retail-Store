@@ -1,4 +1,5 @@
 import Supplier from '../models/supplier';
+import bill from '../models/Bill';
 import mongoose from 'mongoose';
 import { Router } from "express";
 const router = Router();
@@ -17,6 +18,8 @@ router.get("/supplier", async (req ,res) => {
     const { UserId , name} = req.body;
     let supplier = await Customer.findOne({ UserId , name});
     if (!supplier.isEmpty()) {
+      let transactions = bill.find({Client_id:supplier.Supplier_Id}).sort({date:-1}).limit(10) ;
+      supplier.transactions = transactions ;
       return res.status(200).send(supplier);
     } else {
       return res.status(200).send("Supplier details not found");
