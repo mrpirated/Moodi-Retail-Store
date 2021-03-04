@@ -5,8 +5,7 @@ import { Router } from "express";
 const router = Router();
 import { validationResult } from "express-validator";
 
-
-router.get('/generalreport' , async (req,res)=>{
+router.get('/expiry', async (req,res)=>{
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
       console.log(errors);
@@ -16,21 +15,20 @@ router.get('/generalreport' , async (req,res)=>{
         .send("Error in Validation");
     }
     try {
-        const {name ,UserId} = req.body;
-        let  Item = await item.findOne({name:name, UserId:UserId});
-        if (Item){
-            let itemcode = Item._id ;
-            let batch = await batches.find({ItemCode:itemcode});
-            Item.Batches = batch;
-            return res.status(200).send(Item);
+        const {start, end} = req.body;
+        let batch = await batches.find({Expiry:{$lte:Date(end) , $gte:Date.now()}});
+        for (let i = 0; i < batch.length; i++) {
+          let itemcode = batch[i].ItemCode;
+          item.findById(itemcode, function(err, result){batch[i].Item = result;}).select({'Batches':0, 'UserId':0});         
         }
-        else {
-            return res.status(200).send("Item details not found");
-          }
-    } catch (err) {
+        return res.status(200).send(batch);        
+
+    } catch (error) {
         console.log(err.message);
     res
       .status(ErrorCode.HTTP_SERVER_ERROR)
       .json({ errors: { msg: "Server Error!" } });
     }
+
+
 });
