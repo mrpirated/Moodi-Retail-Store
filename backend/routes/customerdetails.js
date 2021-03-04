@@ -14,8 +14,8 @@ router.get("/customer", async (req, res) => {
       .send("Error in Validation");
   }
   try {
-    const { UserId, name } = req.body;
-    let customer = await Customer.findOne({ UserId, name });
+    const { UserId, Name } = req.body;
+    let customer = await Customer.findOne({ UserId, Name });
     if (customer) {
       return res.status(200).send(customer);
     } else {
@@ -45,12 +45,12 @@ router.post("/addcustomer",
         .send("Error in Validation");
     }
     try {
-      const { UserId, name, phone, address, email, ledger } = req.body;
+      const { UserId, Name, phone, address, email, ledger } = req.body;
 
       let customer = new Customer({
         UserId: UserId,
         Customer_Id: new mongoose.Types.ObjectId(),
-        name: name,
+        Name: Name,
         phone: phone,
         Address: address,
         Email: email,

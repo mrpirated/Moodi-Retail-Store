@@ -14,8 +14,8 @@ router.get("/supplier", async (req ,res) => {
       .send("Error in Validation");
   }
   try {
-    const { UserId , name} = req.body;
-    let supplier = await Customer.findOne({ UserId , name});
+    const { UserId , Name} = req.body;
+    let supplier = await Customer.findOne({ UserId , Name});
     if (!supplier.isEmpty()) {
       return res.status(200).send(supplier);
     } else {

@@ -34,6 +34,18 @@ const BatcheSchema = Schema({
         type:Number,
         required:true,
     },
+    CGST:{
+        type:Number,
+        default:0
+    },
+    SGST:{
+        type:Number,
+        default:0
+    },
+    IGST:{
+        type:Number,
+        default:0
+    },
     HSN_Code:{
         type:String,
         required:true,
