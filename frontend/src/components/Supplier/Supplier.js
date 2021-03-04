@@ -18,20 +18,31 @@ function Supplier() {
                     }}>
                     <div className="field" >
                         <label classname="name-label-supplier" style={{
-                            paddingRight:'10px'
+                            paddingRight: '10px',
+                            fontSize: '30px',
+                            fontWeight: 'bolder'
                         }}>Supplier Name: </label>
                         <input type="text" style={{
-                            marginRight:'10px'
+                            marginRight: '10px',
+                            height: '40px',
+                            width: '30rem',
+                            fontSize: '20px',
+                            padding: '5px'
                         }} />
                     </div>
-                    <button>Get Details</button>
+                    <button style={{
+                        height: '40px',
+                        marginLeft: '20px',
+                        fontSize: '20px',
+                        padding: '5px'
+                    }}>Get Details</button>
                 </form>
             </div>
             <hr
                 style={{
-                    color: 'black',
-                    backgroundColor: 'black',
-                    height: '5px',
+                    color: '#d3d3d3',
+                    backgroundColor: '#d3d3d3',
+                    height: '2px',
                     marginTop: '25px'
                 }}
             />
@@ -107,10 +118,10 @@ function Supplier() {
             </div>
             <hr
                 style={{
-                    color: 'black',
-                    backgroundColor: 'black',
-                    height: '5px',
-                    margin: '25px 0px'
+                    color: '#d3d3d3',
+                    backgroundColor: '#d3d3d3',
+                    height: '2px',
+                    marginTop: '25px'
                 }}
             />
             <Table title='Supplier Table' />
