@@ -10,21 +10,8 @@ function Supplier() {
         <div className="supplier">
             <Navbar title="Supplier Details"/>
             <div classname="supplier-form" >
-                <h1 classname="head-supplier" style={{
-                    display: 'flex',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    margin: '50px 0px 25px'
-                }}>Supplier</h1>
-                <hr
-                    style={{
-                        color: 'black',
-                        backgroundColor: 'black',
-                        height: '5px',
-                        marginBottom: '25px'
-                    }}
-                />
                 <form className="form" style={{
+                            marginTop:'25px',
                             display: 'flex',
                             justifyContent: 'center',
                             alignItems: 'center'
