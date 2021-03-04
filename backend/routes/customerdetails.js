@@ -15,8 +15,8 @@ router.get("/customer", async (req, res) => {
       .send("Error in Validation");
   }
   try {
-    const { UserId, name } = req.body;
-    let customer = await Customer.findOne({ UserId, name });
+    const { UserId, Name } = req.body;
+    let customer = await Customer.findOne({ UserId, Name });
     if (customer) {
      let transactions = bill.find({Client_id:customer.Customer_Id}).sort({date:-1}).limit(10) ;
      customer.transactions = transactions ;
@@ -48,12 +48,12 @@ router.post("/addcustomer",
         .send("Error in Validation");
     }
     try {
-      const { UserId, name, phone, address, email, ledger } = req.body;
+      const { UserId, Name, phone, address, email, ledger } = req.body;
 
       let customer = new Customer({
         UserId: UserId,
         Customer_Id: new mongoose.Types.ObjectId(),
-        name: name,
+        Name: Name,
         phone: phone,
         Address: address,
         Email: email,

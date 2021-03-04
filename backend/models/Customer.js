@@ -10,7 +10,7 @@ const CustomerSchema = Schema({
         required:true,
         unique:true
     },
-    name: {
+    Name: {
         type:String,
         required:true,
     },

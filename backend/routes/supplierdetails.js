@@ -15,8 +15,8 @@ router.get("/supplier", async (req ,res) => {
       .send("Error in Validation");
   }
   try {
-    const { UserId , name} = req.body;
-    let supplier = await Customer.findOne({ UserId , name});
+    const { UserId , Name} = req.body;
+    let supplier = await Customer.findOne({ UserId , Name});
     if (!supplier.isEmpty()) {
       let transactions = bill.find({Client_id:supplier.Supplier_Id}).sort({date:-1}).limit(10) ;
       supplier.transactions = transactions ;
