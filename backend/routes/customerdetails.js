@@ -1,4 +1,5 @@
 import Customer from '../models/Customer';
+import bill from '../models/Bill'
 import mongoose from 'mongoose';
 import { Router } from "express";
 const router = Router();
@@ -17,6 +18,8 @@ router.get("/customer", async (req, res) => {
     const { UserId, Name } = req.body;
     let customer = await Customer.findOne({ UserId, Name });
     if (customer) {
+     let transactions = bill.find({Client_id:customer.Customer_Id}).sort({date:-1}).limit(10) ;
+     customer.transactions = transactions ;
       return res.status(200).send(customer);
     } else {
       return res.status(200).send("Customer details not found");

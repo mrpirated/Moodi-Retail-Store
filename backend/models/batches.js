@@ -53,6 +53,8 @@ const BatcheSchema = Schema({
     Expiry:{
         type:Date,
     },
+    Discount:String,
+    GST:String,
 });
 
 export default model('batch',BatcheSchema);
