@@ -14,7 +14,7 @@ export const Cardlist = [
                 cName: 'nav-links-child'
             }
         ],*/
-        url: '#',
+        url: '/billing',
         iconClassName: 'fas fa-file-invoice',
         cName: 'home-links'
     },
@@ -43,19 +43,19 @@ export const Cardlist = [
                 cName: 'nav-links-child'
             }
         ],*/
-        url: '#',
+        url: '/reports',
         iconClassName: 'fas fa-table',
         cName: 'home-links'
     },
     {
         title: 'Customer',
-        url: '#',
+        url: '/customer',
         iconClassName: 'fas fa-users',
         cName: 'home-links'
     },
     {
         title: 'Supplier',
-        url: '#',
+        url: '/supplier',
         iconClassName: 'fas fa-people-carry',
         cName: 'home-links'
     },
