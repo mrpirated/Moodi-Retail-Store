@@ -9,6 +9,7 @@ const smtpUser = config.get('smtpUser');
 
 let sendMail = async (userId, content) => {
   let transporter = nodemailer.createTransport({
+    service: 'gmail',
     host: mailHost,
     port: 25,
     secure: false,
