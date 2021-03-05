@@ -27,10 +27,12 @@ function Billing(){
                     marginTop: '25px'
                 }}
             />
+            <div class="heading">
             <h1> Bill No. : <input type="text" style={{
                             marginRight:'5px',
                             fontSize:'25px'
                         }}></input></h1>
+                        </div>
         <form className="form" style={{
                             marginTop:'30px',
                             marginLeft:'0px',
