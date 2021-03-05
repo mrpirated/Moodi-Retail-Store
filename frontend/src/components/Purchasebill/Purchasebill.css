@@ -1,0 +1,14 @@
+.Supplier h1{
+ text-align: center;
+ font-size: 30px;
+}
+.addsupplier p{
+ font-size:25px;
+ margin-top:-50px;
+}
+.addsupplier p input{
+    font-size: 20px;
+}
+.addsupplier button{
+    margin-left:1200px;
+}

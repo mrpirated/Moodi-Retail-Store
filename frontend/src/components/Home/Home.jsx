@@ -5,7 +5,7 @@ import Homebody from './Homebody';
 function Home() {
     return (
         <div>
-            <Navbar />
+            <Navbar title="Moodi Retail Store" />
             <Homebody />
         </div>
     );
