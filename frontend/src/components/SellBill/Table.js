@@ -56,7 +56,7 @@ function Table(props) {
                 columns={columns}
                 options={{
                      filtering: true,
-                    exportButton: true
+                    exportButton: false
                 }}
             />
         </div>

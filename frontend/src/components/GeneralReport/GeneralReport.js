@@ -1,11 +1,11 @@
 import React from 'react'
 import Navbar from '../Home/Navbar';
-import './Report.css';
+import './GeneralReport.css';
 import * as ReactBootstrap from 'react-bootstrap';
-import Table from '../Reports/Table';
+import Table from '../GeneralReport/Table';
 const currDate=new Date().toLocaleDateString();
 const currTime=new Date().toLocaleTimeString(); 
-function Report() {
+function GeneralReport() {
     return (
         <div class="Report">
          <Navbar title="General Report"/>
@@ -36,4 +36,4 @@ function Report() {
     )
 }
 
-export default Report
+export default GeneralReport
