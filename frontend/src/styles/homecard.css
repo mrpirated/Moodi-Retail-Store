@@ -1,13 +1,15 @@
 .features-col {
-  padding-left: 4%;
-  padding-right: 4%;
-  margin: 1%;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: 10px;
+  height: 250px;
   line-height: 2rem;
   text-align: center;
   padding-top: 10%;
   padding-bottom: 10%;
   margin-top: 10%;
   border-radius: 20px;
+  width: 200px;
 }
 
 .fa-file-invoice {

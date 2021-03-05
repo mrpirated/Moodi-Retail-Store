@@ -1,4 +1,4 @@
-.home-cards {
+/* .home-cards {
   background-color: white;
   text-align: center;
   position: relative;
@@ -6,4 +6,30 @@
   padding-left: 100px;
   padding-right: 100px;
   margin-left: 3%;
+} */
+
+.home-cards {
+  margin-top: 10rem;
+  margin-left: 10rem;
+  background-color: white;
+  text-align: center;
+  width: 1200px;
+  clear: both;
+}
+
+#first {
+  width: 300px;
+  float: left;
+}
+#second {
+  width: 300px;
+  float: left;
+}
+#third {
+  width: 300px;
+  float: left;
+}
+#fourth {
+  width: 300px;
+  float: left;
 }

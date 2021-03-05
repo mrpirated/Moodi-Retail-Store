@@ -7,7 +7,7 @@ import Supplier from './components/Supplier/Supplier';
 function App() {
   return (
     <div className="App">
-      <Supplier/>
+      <Home/>
     </div>
   );
 }

@@ -5,18 +5,18 @@ import '../../styles/homebody.css';
 
 export default function Homebody(){
     return (
-        <div>
-            <section className="home-cards">
-                <div>
+        <div className="home-cards">
+            {/* <section> */}
+                {/* <div> */}
                     {
                         Cardlist.map((item, index) => {
                             return (
-                                <Homecard title={item.title} cName={item.cName} url={item.url} iconClassName={item.iconClassName}/>
+                                <Homecard title={item.title} idName={item.idName} cName={item.cName} url={item.url} iconClassName={item.iconClassName}/>
                             )
                         })
                     }
-                </div>
-            </section>
+                {/* </div> */}
+            {/* </section> */}
         </div>
 
         /*<div>
