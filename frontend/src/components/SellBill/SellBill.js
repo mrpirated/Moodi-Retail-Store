@@ -1,14 +1,14 @@
 import React from 'react';
 import Navbar from '../Home/Navbar';
-import './Billing.css';
+import './SellBill.css';
 import * as ReactBootstrap from 'react-bootstrap';
-import Table from '../Billing/table';
+import Table from './Table';
 const currDate=new Date().toLocaleDateString();
 const currTime=new Date().toLocaleTimeString(); 
-function Billing(){
+function SellBill(){
     return (
         <div className="customer">
-            <Navbar title="Billing"/>
+            <Navbar title="Sell Bill"/>
 
             <div classname="customer-form" >
                 <button> Sell</button> 
@@ -136,4 +136,4 @@ function Billing(){
         </div>
     )
 }
-export default Billing
+export default SellBill
