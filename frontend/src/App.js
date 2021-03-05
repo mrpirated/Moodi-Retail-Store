@@ -6,11 +6,11 @@ import Supplier from './components/Supplier/Supplier';
 import Customer from './components/Customer/Customer';
 import Billing from "./components/Billing/Billing.js";
 import report from "./components/Reports/Report";
-import Report from "./components/Reports/Report";
+import Gstreport from "./components/Gstreport/Gstreport";
 function App() {
   return (
     <div className="App">
-      <Report/>
+      <Gstreport/>
     </div>
   );
 }
