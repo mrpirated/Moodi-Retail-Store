@@ -3,9 +3,10 @@ import bill from '../models/Bill';
 import mongoose from 'mongoose';
 import { Router } from "express";
 const router = Router();
-import {  validationResult } from "express-validator";
+import {  check, validationResult } from "express-validator";
 
 router.get("/supplier", async (req ,res) => {
+  
     const errors = validationResult(req);
   if (!errors.isEmpty()) {
     console.log(errors);
@@ -16,10 +17,10 @@ router.get("/supplier", async (req ,res) => {
   }
   try {
     const { UserId , Name} = req.body;
-    let supplier = await Customer.findOne({ UserId , Name});
-    if (!supplier.isEmpty()) {
-      let transactions = bill.find({Client_id:supplier.Supplier_Id}).sort({date:-1}).limit(10) ;
-      supplier.transactions = transactions ;
+    let supplier = await Supplier.find({ UserId });
+    if (supplier) {
+      // let transactions = bill.find({Client_id:supplier.Supplier_Id}).sort({date:-1}).limit(10) ;
+      // supplier.transactions = transactions ;
       return res.status(200).send(supplier);
     } else {
       return res.status(200).send("Supplier details not found");

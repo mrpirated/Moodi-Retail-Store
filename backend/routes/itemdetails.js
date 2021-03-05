@@ -35,14 +35,18 @@ router.post("/items", async (req, res) => {
 router.get("/items", async (req, res) => {
   const errors = validationResult(req);
   if (!errors.isEmpty()) {
+    
     console.log(errors);
     return res.status(ErrorCode.HTTP_BAD_REQ).json({ errors: errors.array() });
   }
   try {
-    const { _id, UserId } = req.body;
-    let item = await Items.findOne({ _id, UserId });
+    const {  UserId } = req.query;
+    console.log(req.query);
+    console.log(UserId);
+    let item = await Items.find({  UserId });
     if (item) {
-      return res.status(200).send(item);
+      console.log(JSON.stringify(item));
+      return res.status(200).json(item);
     } else {
       return res.status(200).send("Item not found");
     }

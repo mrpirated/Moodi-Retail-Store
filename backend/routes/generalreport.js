@@ -3,7 +3,7 @@ import batches from '../models/batches';
 import mongoose from 'mongoose';
 import { Router } from "express";
 const router = Router();
-import { validationResult } from "express-validator";
+import { check, validationResult } from "express-validator";
 
 
 router.get('/generalreport' , async (req,res)=>{
