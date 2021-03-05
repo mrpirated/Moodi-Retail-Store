@@ -11,7 +11,7 @@ function Report() {
          <Navbar title="General Report"/>
 
 <div classname="customer-form" >
-    <div classname="generalreport"><button> General Report</button> </div>
+    <button> General Report</button> 
     <button> GST Report</button> 
     <button> Expiry Report</button> 
     <button> Damaged Goods</button> 
