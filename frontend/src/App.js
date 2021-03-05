@@ -7,10 +7,13 @@ import Customer from './components/Customer/Customer';
 import Billing from "./components/Billing/Billing.js";
 import report from "./components/Reports/Report";
 import Gstreport from "./components/Gstreport/Gstreport";
+import Expiryreport from "./components/Expiryreport/Expiryreport";
+import Damagedgood from "./components/Damagedgood/Damagedgood";
+import Purchasebill from "./components/Purchasebill/Purchasebill.js";
 function App() {
   return (
     <div className="App">
-      <Gstreport/>
+      <Purchasebill/>
     </div>
   );
 }
