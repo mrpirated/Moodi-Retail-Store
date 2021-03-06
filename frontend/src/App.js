@@ -10,10 +10,12 @@ import Expiryreport from "./components/Expiryreport/Expiryreport";
 import Damagedgood from "./components/Damagedgood/Damagedgood";
 import Purchasebill from "./components/Purchasebill/Purchasebill.js";
 import SellBill from "./components/SellBill/SellBill"
+import Damagedgoodsreturnbill from "./components/Damagedgoodsreturnbill/Damagedgoodsreturnbill.js";
+import Customerreturn from "./components/Customerreturn/Customerreturn.js";
 function App() {
   return (
     <div className="App">
-      <Damagedgood/>
+      <Customerreturn/>
     </div>
   );
 }
