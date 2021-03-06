@@ -46,7 +46,7 @@ function Table(props) {
             title:'MRP', field:'product'
         },
         {
-            title:'Selling Price', field:'basicPrice'
+            title:'Tagged Selling Price', field:'basicPrice'
         },
         {
             title:'Special Discount', field:'discount'
