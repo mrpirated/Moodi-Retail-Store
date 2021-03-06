@@ -12,7 +12,7 @@ function Purchasebill() {
 
 <div classname="customer-form" >
      <button> Sell</button> 
-     <button> Return </button> 
+     <button> Customer Return </button> 
      <button> Purchase</button>  
      <button> Damaged goods for Bill</button> 
     <div className="Add">
@@ -25,14 +25,40 @@ function Purchasebill() {
                     height: '1px',
                     marginTop: '25px'
                 }}
+
             />
+             <div class="heading">
+            <h1> Bill No. : <input type="text" style={{
+                            marginRight:'5px',
+                            fontSize:'25px'
+                        }}></input></h1>
+                        </div>
             <div className="Supplier">
             <h1> Supplier Details </h1>
             </div>
-            <div className="addsupplier">
-                <button>Add Supplier</button>
-                <p> Search by Name: <input type="text"></input></p>
-            </div>
+            <div className="field" >
+                        <label classname="name-label-supplier" style={{
+                            paddingRight: '10px',
+                            fontSize: '30px',
+                            marginTop:'10px',
+                            fontWeight: 'bolder'
+                        }}>Supplier Name: </label>
+                        <input type="text" style={{
+                            marginRight: '10px',
+                            marginTop:'10px',
+                            height: '40px',
+                            width: '30rem',
+                            fontSize: '20px',
+                            //padding: '5px'
+                        }} />
+                    </div>
+                    <button style={{
+                        height: '40px',
+                        marginLeft: '780px',
+                        marginTop:'-100px',
+                        fontSize: '20px',
+                        //padding: '5px'
+                    }}>Get Details</button>
 <div style={{
                 display: 'flex',
                 justifyContent: 'center',

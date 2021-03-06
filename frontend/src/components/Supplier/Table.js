@@ -8,28 +8,42 @@ function Table(props) {
 
     const columns = [
         {
+            title:'NO.', cellStyle: {
+            width: 100,
+            maxWidth: 100
+            },
+            headerStyle: {
+            width:100,
+            maxWidth: 100
+            }
+        },
+        {
             title:'Date', field:'date', headerStyle: { fontSize: 18, fontWeight: 'bold'}
         },
         {
             title:'Transaction ID', field:'transactionID', headerStyle: { fontSize: 18, fontWeight: 'bold'}
-        },{
+        },
+        {
+            title:'Barcode', field:'barcode', headerStyle: { fontSize: 18, fontWeight: 'bold'}
+        },
+        {
             title:'Category', field:'category', headerStyle: { fontSize: 18, fontWeight: 'bold'}
-        },{
-            title:'Product Type', field:'productType', headerStyle: { fontSize: 18, fontWeight: 'bold'}
-        },{
+        },
+        {
+            title:'Product', field:'product', headerStyle: { fontSize: 18, fontWeight: 'bold'}
+        },
+        {
             title:'Company', field:'company', headerStyle: { fontSize: 18, fontWeight: 'bold'}
         },{
             title:'Quantity', field:'quantity', headerStyle: { fontSize: 18, fontWeight: 'bold'}
         },{
             title:'Wt/Vol', field:'WtVol', headerStyle: { fontSize: 18, fontWeight: 'bold'}
-        },{
-            title:'Expiry Date', field:'expiryDate', headerStyle: { fontSize: 18, fontWeight: 'bold'}
-        },{
+        },
+        {
             title:'HSN Code', field:'HSNCode', headerStyle: { fontSize: 18, fontWeight: 'bold'}
-        },{
-            title:'Barcode', field:'barcode', headerStyle: { fontSize: 18, fontWeight: 'bold'}
-        },{
-            title:'Product', field:'product', headerStyle: { fontSize: 18, fontWeight: 'bold'}
+        },
+        {
+            title:'Expiry Date', field:'expiryDate', headerStyle: { fontSize: 18, fontWeight: 'bold'}
         },{
             title:'MRP', field:'mrp', headerStyle: { fontSize: 18, fontWeight: 'bold'}
         },{
@@ -50,7 +64,7 @@ function Table(props) {
                 columns={columns}
                 options={{
                     // filtering: true,
-                    exportButton: true
+                    exportButton: false
                 }}
             />
         </div>

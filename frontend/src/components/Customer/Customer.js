@@ -61,14 +61,6 @@ function Customer() {
                 <div>
                     <label classname="name-label-customer" style={{
                         paddingRight:'10px'
-                    }}>GST Number: </label>
-                    <input type="text" style={{
-                        marginRight:'90px'
-                    }} />
-                </div>
-                <div>
-                    <label classname="name-label-customer" style={{
-                        paddingRight:'10px'
                     }}>Customer ID: </label>
                     <input type="text" style={{
                         marginRight:'90px'

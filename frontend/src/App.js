@@ -8,10 +8,11 @@ import Gstreport from "./components/Gstreport/Gstreport";
 import Expiryreport from "./components/Expiryreport/Expiryreport";
 import Damagedgood from "./components/Damagedgood/Damagedgood";
 import Purchasebill from "./components/Purchasebill/Purchasebill.js";
+import SellBill from "./components/SellBill/SellBill"
 function App() {
   return (
     <div className="App">
-      <Purchasebill/>
+      <Customer/>
     </div>
   );
 }

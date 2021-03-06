@@ -17,32 +17,37 @@ function Table(props) {
             maxWidth: 100
             }
         },
-       {
-            title:'Barcode', field:'barcode'
+        {
+            title:'Barcode', field:'barcode', headerStyle: { fontSize: 18, fontWeight: 'bold'}
         },
         {
-            title:'Company', field:'company'
+            title:'Category', field:'category', headerStyle: { fontSize: 18, fontWeight: 'bold'}
         },
         {
-            title:'Product', field:'productType'
+            title:'Product', field:'product', headerStyle: { fontSize: 18, fontWeight: 'bold'}
         },
         {
-            title:'Wt/Vol', field:'WtVol'
+            title:'Company', field:'company', headerStyle: { fontSize: 18, fontWeight: 'bold'}
+        },{
+            title:'Quantity', field:'quantity', headerStyle: { fontSize: 18, fontWeight: 'bold'}
+        },{
+            title:'Wt/Vol', field:'WtVol', headerStyle: { fontSize: 18, fontWeight: 'bold'}
         },
         {
-            title:'Quantity', field:'quantity'
+            title:'HSN Code', field:'HSNCode', headerStyle: { fontSize: 18, fontWeight: 'bold'}
         },
         {
-            title:'MRP', field:'product'
-        },
-        {
-            title:'Purchase Rate', field:'quantity'
-        },
-        {
-            title:'GST', field:'gst'
-        },
-        {
-            title:'Total', field:'total'
+            title:'Expiry Date', field:'expiryDate', headerStyle: { fontSize: 18, fontWeight: 'bold'}
+        },{
+            title:'MRP', field:'mrp', headerStyle: { fontSize: 18, fontWeight: 'bold'}
+        },{
+            title:'Basic Price', field:'basicPrice', headerStyle: { fontSize: 18, fontWeight: 'bold'}
+        },{
+            title:'GST%', field:'gst%', headerStyle: { fontSize: 18, fontWeight: 'bold'}
+        },{
+            title:'Purchase Rate', field:'purchaseRate', headerStyle: { fontSize: 18, fontWeight: 'bold'}
+        },{
+            title:'Total', field:'total', headerStyle: { fontSize: 18, fontWeight: 'bold'}
         }
     ]
 
@@ -52,8 +57,8 @@ function Table(props) {
                 data={data}
                 columns={columns}
                 options={{
-                     filtering: true,
-                    exportButton: true
+                    // filtering: true,
+                    exportButton: false
                 }}
             />
         </div>
