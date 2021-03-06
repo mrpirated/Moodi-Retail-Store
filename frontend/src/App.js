@@ -12,7 +12,7 @@ import SellBill from "./components/SellBill/SellBill"
 function App() {
   return (
     <div className="App">
-      <Supplier/>
+      <SellBill/>
     </div>
   );
 }

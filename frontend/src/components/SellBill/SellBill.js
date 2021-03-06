@@ -126,7 +126,7 @@ function SellBill(){
                     margin: '25px 0px'
                 }}
             />
-            <Table title='Customer Table' />
+            <Table title='Billing' />
             <div class="bottom"> 
             <h1>Total payment: <input type="text"></input></h1>
            <h1>Total Savings: <input type="text"></input></h1>

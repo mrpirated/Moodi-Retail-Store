@@ -39,10 +39,13 @@ function Table(props) {
             title:'GST', field:'gst%'
         },
         {
-            title:'Selling Price Rate', field:'basicPrice'
+            title:'Special Discount', field:'specialdiscount'
         },
         {
-            title:'Discount', field:'mrp'
+            title:'Tagged Selling Price Rate', field:'basicPrice'
+        },
+        {
+            title:'TotalDiscount', field:'totaldiscount'
         },
         {
             title:'Total', field:'total'
