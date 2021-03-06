@@ -5,7 +5,7 @@ import * as ReactBootstrap from 'react-bootstrap';
 import Table from './Table';
 const currDate=new Date().toLocaleDateString();
 const currTime=new Date().toLocaleTimeString(); 
-function Damagedgood() {
+function nonreturnableDamagedgood() {
     return (
         <div class="Report">
          <Navbar title="Damaged Good"/>
@@ -37,10 +37,10 @@ function Damagedgood() {
                     marginTop: '25px'
                 }}
             />
-            <Table title='Returnable Report Table' />
+            <Table title='Non-Returnable Report Table' />
         </div>
         </div>
     )
 }
 
-export default Damagedgood
+export default nonreturnableDamagedgood

@@ -33,9 +33,6 @@ function Purchasebill() {
                             fontSize:'25px'
                         }}></input></h1>
                         </div>
-            <div className="Supplier">
-            <h1> Supplier Details </h1>
-            </div>
             <div className="field" >
                         <label classname="name-label-supplier" style={{
                             paddingRight: '10px',
@@ -138,7 +135,14 @@ function Purchasebill() {
                     marginTop: '25px'
                 }}
                 />
+                <div class="addproduct">
+                <button> Add Product</button></div>
+                
             <Table title='Purchase Bill Table' />
+            <h1>Total payment: <input type="text"></input></h1>
+            <button> Pay</button>
+            <button>Print Barcode</button>
+
         </div>
         </div>
     )

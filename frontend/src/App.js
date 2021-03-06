@@ -2,6 +2,7 @@ import React from "react";
 import Login from "./components/login/login.jsx";
 import "./App.css";
 import Home from "./components/Home/Home.jsx";
+import GeneralReport from "./components/GeneralReport/GeneralReport";
 import Supplier from './components/Supplier/Supplier';
 import Customer from './components/Customer/Customer';
 import Gstreport from "./components/Gstreport/Gstreport";
@@ -12,7 +13,7 @@ import SellBill from "./components/SellBill/SellBill"
 function App() {
   return (
     <div className="App">
-      <SellBill/>
+      <Damagedgood/>
     </div>
   );
 }
