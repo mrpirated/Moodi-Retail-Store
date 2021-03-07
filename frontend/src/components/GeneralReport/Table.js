@@ -1,9 +1,13 @@
-import React from 'react'
+import React,{useState} from 'react'
 import MaterialTable from 'material-table';
 
+
 function Table(props) {
+    
+    
 
     const data = [
+
     ]
 
     const columns = [
@@ -71,7 +75,7 @@ function Table(props) {
                 data={data}
                 columns={columns}
                 options={{
-                     filtering: true,
+                    filtering: true,
                     exportButton: true
                 }}
             />
