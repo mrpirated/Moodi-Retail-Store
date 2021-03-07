@@ -35,9 +35,6 @@ function Table(props) {
             title:'Product Type', field:'productType'
         },
         {
-            title:'Transfer to Non-Returnable', field:'status'
-        },
-        {
             title:'Wt/Vol', field:'Wt/Vol'
         },
         {
@@ -56,7 +53,6 @@ function Table(props) {
         {
             title:'ExpiryDate', field:'expirydate'
         },
-       
     ]
 
     return (

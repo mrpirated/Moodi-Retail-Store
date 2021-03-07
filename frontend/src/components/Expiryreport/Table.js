@@ -35,7 +35,7 @@ function Table(props) {
             title:'MFG', field:'mfg'
         },
         {
-            title:'Purchase Date', field:'purchase_date'
+            title:'Purchase Date from supplier', field:'purchase_date'
         },
         {
             title:'Expiry Date', field:'expiry_date'
@@ -49,7 +49,7 @@ function Table(props) {
                 columns={columns}
                 options={{
                      filtering: true,
-                    exportButton: true
+                    exportButton: false
                 }}
             />
         </div>

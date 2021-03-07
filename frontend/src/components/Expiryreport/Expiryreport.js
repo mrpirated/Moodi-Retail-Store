@@ -28,6 +28,14 @@ function Expiryreport() {
           <div class="search">
               <h1>Expiry Date: <input type="text"></input></h1>
                         </div>  
+                        <hr
+                style={{
+                    color: 'black',
+                    backgroundColor: 'gray',
+                    height: '1px',
+                    marginTop: '25px'
+                }}
+            />
             <Table title='Report Table' />
         </div>
         </div>

@@ -1,33 +1,25 @@
-import React from 'react'
+import React from 'react';
 import Navbar from '../Home/Navbar';
-import './customer.css';
+import './Customerreturn.css';
 import * as ReactBootstrap from 'react-bootstrap';
-import Table from '../Customer/table';
-
-function Customer() {
+import Table from './Table';
+import Customer from '../Customer/Customer';
+const currDate=new Date().toLocaleDateString();
+const currTime=new Date().toLocaleTimeString(); 
+function Customerreturn(){
     return (
         <div className="customer">
-            <Navbar title="Customer Details"/>
+            <Navbar title="Customer Return Billing"/>
+
             <div classname="customer-form" >
-                <form className="form" style={{
-                            marginTop:'25px',
-                            display: 'flex',
-                            justifyContent: 'center',
-                            alignItems: 'center',
-                            fontSize:'25px'
-                    }}>
-                    <div className="field" >
-                        <label classname="name-label-customer" style={{
-                            paddingRight:'10px'
-                        }}>Customer Name: </label>
-                        <input type="text" style={{
-                            marginRight:'10px',
-                            fontSize:'25px'
-                        }} />
-                    </div>
-                    <button>Get Details</button>
-                </form>
-            </div>
+                <button> Sell</button> 
+                <button> Customer Return</button> 
+                <button> Purchase</button> 
+                <button> Damaged Goods Return Bill</button> 
+                <div className="Add">
+            <p> Date : {currDate} ,Time:  {currTime}</p>
+        
+        </div>    
             <hr
                 style={{
                     color: 'black',
@@ -36,6 +28,32 @@ function Customer() {
                     marginTop: '25px'
                 }}
             />
+            <div class="heading">
+            <h1> Bill No. : <input type="text" style={{
+                            marginRight:'5px',
+                            fontSize:'25px'
+                        }}></input></h1>
+                        </div>
+        <form className="form" style={{
+                            marginTop:'30px',
+                            marginLeft:'0px',
+                            display: 'flex',
+                            justifyContent: 'right',
+                            alignItems: 'right',
+                            fontSize:'25px'
+                    }}>
+                    <div className="field" >
+                        <label classname="name-label-customer" style={{
+                            paddingRight:'5px'
+                        }}>Customer Name: </label>
+                        <input type="text" style={{
+                            marginRight:'5px',
+                            fontSize:'25px'
+                        }} />
+                    </div>
+                    <button>Get Details</button>
+                </form>
+            </div>
             <div style={{
                 display: 'flex',
                 justifyContent: 'center',
@@ -106,9 +124,12 @@ function Customer() {
                     margin: '25px 0px'
                 }}
             />
-            <Table title='Customer Table' />
+            <Table title='Customer Return Billing' />
+            <div class="bottom"> 
+            <h1>Return payment: <input type="text"></input></h1>
+              <button> Generate </button>
+   </div>
         </div>
     )
 }
-
-export default Customer
+export default Customerreturn
