@@ -2,7 +2,7 @@ import { Router } from "express";
 const router = Router();
 import { check, validationResult } from "express-validator";
 import User from "../models/User";
-import Items from "../models/Item";
+import item from "../models/Item";
 import batches from "../models/batches";
 import mongoose from "mongoose";
 import generatecode from "../controllers/generatebarcode";
@@ -34,8 +34,16 @@ router.post("/addbatch", async (req, res) => {
       IGST: IGST,
       Expiry: Expiry,
       Discount :Discount,
-    })
+    });
     batch.save();
+
+    // ==========Updating releted field============
+  let result =  item.updateOne({_id:ItemCode},{
+    $inc:{Total_Units:Quantity} , $push:{Batches:Batch_Id}
+  
+  });
+    console.log(result);
+
     return res.status(200).send(batch);
 
   }catch (err) {
