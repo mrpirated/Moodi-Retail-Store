@@ -15,7 +15,8 @@ const BillSchema = Schema({
         {Batch_Id:{
             type:String,
             required:true,
-        }, 
+        },
+        ItemCode:String ,
         Quantity:{
             type:Number,
             required:true,
@@ -24,22 +25,38 @@ const BillSchema = Schema({
             type:Number,
             required:true,
         },
-        GST:{
+        CGST:{
+            type:Number,
+            default:0
+        },
+        SGST:{
+            type:Number,
+            default:0
+        },
+        IGST:{
+            type:Number,
+            default:0
+        },
+        HSN_Code:{
             type:String,
             required:true,
-        },  //Linked to HSN Code
+        },
+        Tax:{
+            type:Number,
+        },
+        NetPrice: Number,
+    
         },
     ],
-    date:{
+    Date:{
         type:Date,
         required:true,
     },
-    Gst:String, //total gst
     TotalCost:{
         type:String,
         required:true,
     },
-    Mode:String //mode of payment
+    Mode:String
 
 
 });

@@ -17,19 +17,23 @@ router.post("/addbatch", async (req, res) => {
       .send("Error in Validation");
   }
   try{
-    const {UserId,Date,ItemCode,Quantity,Cost_price,Selling_price,MRP,HSN_Code,Expiry}=req.body;
+    const {UserId,Date,ItemCode,Quantity,Cost_price,Selling_price,MRP,HSN_Code,CGST,SGST,IGST,Expiry,Discount}=req.body;
     const Batch_Id=generatecode();
     let batch = new batches({
-        UserId,
-        Batch_Id,
-        Date,
-        ItemCode,
-        Quantity,
-        Cost_price,
-        Selling_price,
-        MRP,
-        HSN_Code,
-        Expiry
+      UserId :UserId,
+      Date: Date,
+      Batch_Id:Batch_Id,
+      ItemCode:  ItemCode,
+      Quantity : Quantity,
+      Cost_price :Cost_price,
+      Selling_price :Selling_price ,
+      MRP :MRP,
+      HSN_Code :HSN_Code,
+      CGST: CGST,
+      SGST: SGST,
+      IGST: IGST,
+      Expiry: Expiry,
+      Discount :Discount,
     })
     batch.save();
     return res.status(200).send(batch);

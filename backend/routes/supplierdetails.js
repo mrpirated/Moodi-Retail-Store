@@ -33,9 +33,6 @@ router.get("/supplier", async (req ,res) => {
 });
 
 router.post("/addsupplier" ,
-[
-    check('email', 'Please input valid email').isEmail(),
-  ],
 async(req,res) =>{
 
     
@@ -48,17 +45,17 @@ async(req,res) =>{
         .send("Error in Validation");
     }
     try{
-        const {UserId , name , phone ,gstno, address , email , ledger}=req.body;
+        const {UserId , Name , Phone ,Gstno, Address , Email , Ledger}=req.body;
         
         let supplier = new Supplier({
             UserId:UserId,
             Supplier_Id :new mongoose.Types.ObjectId(),
-            Name:name,
-            phone :phone,
-            GST_No : gstno,
-            Address: address,
-            Email :email,
-            Ledger : ledger, 
+            Name:Name,
+            phone :Phone,
+            GST_No : Gstno,
+            Address: Address,
+            Email :Email,
+            Ledger : Ledger, 
         })
         await supplier.save();
         console.log(supplier);

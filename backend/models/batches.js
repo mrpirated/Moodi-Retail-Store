@@ -54,7 +54,6 @@ const BatcheSchema = Schema({
         type:Date,
     },
     Discount:String,
-    GST:String,
 });
 
 export default model('batch',BatcheSchema);
