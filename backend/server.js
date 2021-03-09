@@ -6,8 +6,10 @@ import addbatch from './routes/addbatches';
 import customerdetails from './routes/customerdetails';
 import supplierdetails from './routes/supplierdetails';
 import generalreport from './routes/generalreport';
+import billing from './routes/billing';
 import config from 'config';
 import cors from 'cors';
+import generatecode from './controllers/generatebarcode';
 
 const PORT = config.get('serverPort');
 
@@ -28,11 +30,20 @@ app.get('/', (req, res) => {
 
 //**********************************Routes**********************************/
 app.use('/api/user', auth);
+<<<<<<< HEAD
 app.use('/user',itemdetails,addbatch,customerdetails,supplierdetails);
 // app.use('/user',addbatch);
 // app.use('/user',);
 // app.use('/user',);
 //app.use('/user/report',generalreport);
+=======
+app.use('/user',itemdetails ,addbatch,customerdetails,supplierdetails,generalreport);
+app.use('/user/billing',billing);
+// app.use('/user',addbatch);
+// app.use('/user/customer',customerdetails);
+// app.use('/user/supplier',supplierdetails);
+// app.use('/user/report',generalreport);
+>>>>>>> backend
 
 app.listen(PORT, () => {
   console.log('Go!');
