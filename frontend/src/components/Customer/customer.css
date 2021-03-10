@@ -7,3 +7,11 @@
 .form button{
   font-size: 25px;
 }
+.hr-style{
+ 
+    color: 'black';
+    backgroundColor: 'gray';
+    height: '1px';
+    marginTop: '25px';
+
+}
