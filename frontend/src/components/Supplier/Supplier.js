@@ -1,9 +1,8 @@
 import React from 'react'
 import Navbar from '../Home/Navbar';
 import './Supplier.css';
-import * as ReactBootstrap from 'react-bootstrap';
-import Table from '../Supplier/Table';
-
+import {columns} from '../Supplier/Table';
+import DataTable from '../DataTable';
 
 function Supplier() {
     return (
@@ -124,7 +123,7 @@ function Supplier() {
                     marginTop: '25px'
                 }}
             />
-            <Table title='Supplier Table' />
+            <DataTable title='Supplier Table' columns={columns}/>
         </div>
     )
 }

@@ -15,7 +15,7 @@ import Customerreturn from "./components/Customerreturn/Customerreturn.js";
 function App() {
 	return (
 		<div className='App'>
-			<Customer/>
+			<Supplier/>
 		</div>
 	);
 }
