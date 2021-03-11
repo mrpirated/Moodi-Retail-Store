@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import Navbar from '../Home/Navbar';
 import  './customer.css';
 import * as ReactBootstrap from 'react-bootstrap';
-import  columns from './tablecolumns';
+import  {columns} from './tablecolumns.js';
 import Input from '../Input';
 import Table from './table'
 import DataTable from '../DataTable.js';
@@ -26,7 +26,7 @@ function Customer() {
                         })}
             </div>
             <hr className="hr-style"/>
-            <Table title='Customer Table' /*columns={columns}*/ />
+            <DataTable title='Customer Table' col={columns}/>
         </div>
     )
 }

@@ -1,5 +1,5 @@
 
-    const columns = [
+   export const columns = [
         {
             title:'No.', field:'sno', cellStyle: {
             width: 100,
@@ -64,4 +64,4 @@
 
     ]
 
-   
+  

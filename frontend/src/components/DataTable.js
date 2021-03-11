@@ -6,7 +6,7 @@ function DataTable(props) {
         <div>
             <MaterialTable title={props.title}
                // data={data}
-                columns={props.columns}
+                columns={props.col}
                 options={{
                     // filtering: true,
                     exportButton: true
