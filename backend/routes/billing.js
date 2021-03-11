@@ -9,7 +9,7 @@ import customer from '../models/Customer';
 import { Mongoose } from "mongoose";
 import generatecode from "../controllers/generatebarcode";
 
-router.post('./sale', async(req,res)=>{
+router.post('/sale', async(req,res)=>{
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
       console.log(errors);
@@ -34,20 +34,20 @@ router.post('./sale', async(req,res)=>{
         Bill.save();
         //Now Updating Releted fields in Batch, Item , Customer , Supplier
         Items.forEach(ele => {
-          let result =  batches.updateOne({Batch_Id:ele.Batch_Id},{$inc:{Quantity:(ele.Quantity)*(-1)}});
-          console.log(result);
+           batches.updateOne({Batch_Id:ele.Batch_Id},{$inc:{Quantity:(ele.Quantity)*(-1)}}, function (err,result){console.log(result);});
+         
 
-          result =  item.updateOne({_id:ele.ItemCode},{$inc:{Total_Units:(ele.Quantity)*(-1)}});
-          console.log(result);
+           item.updateOne({_id:ele.ItemCode},{$inc:{Total_Units:(ele.Quantity)*(-1)}},function(err,result){console.log(result);});
           
                     
         });
 
-       let result = customer.updateOne({_id:Client_id},{
+        customer.updateOne({_id:Client_id},{
             $push :{Bill_ids:Bill_Id} , $set:{Ledger}
-        });
-        console.log(result);
+        },function(err,result){console.log(result);});
+        
 
+        return res.status(200).send("Bil updated syccesfully");
         
     } catch (err) {
         console.log(err.message);
@@ -84,12 +84,11 @@ router.post('./purchase', async(req,res)=>{
         });
         Bill.save();
         //Now Updating Releted fields in Batch, Item , Customer , Supplier
-       let  result = supplier.updateOne({_id:Client_id},{
+        supplier.updateOne({_id:Client_id},{
             $push :{Bill_ids:Bill_Id}, $set:{Ledger}
-        });
-        console.log(result);
-
-                  
+        },function (err,result){console.log(result);});
+        
+        return res.status(200).send("Purchase Added Sccesfully");                 
 
         
     } catch (err) {
@@ -99,3 +98,5 @@ router.post('./purchase', async(req,res)=>{
       .json({ errors: { msg: "Server Error!" } });
     }
 });
+
+export default router ;

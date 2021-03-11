@@ -16,14 +16,19 @@ router.get('/expiry', async (req,res)=>{
     }
     try {
         const {start, end} = req.body;
-        let batch = await batches.find({Expiry:{$lte:Date(end) , $gte:Date.now()}});
+        let batch; let Items=[] ;
+        await batches.find({$and:[ {Expiry:{$lte: end} } , { Expiry:{$gte : start}} ]} , function(err,result){ if ( err )throw err ;  batch = result;});
+        // console.log(batch);
         for (let i = 0; i < batch.length; i++) {
           let itemcode = batch[i].ItemCode;
-          item.findById(itemcode, function(err, result){batch[i].Item = result;}).select({'Batches':0, 'UserId':0});         
+         await item.findById(itemcode, function (err, result){ console.log(result); Items.push(result); }).select({'Batches':0, 'UserId':0 });  
         }
-        return res.status(200).send(batch);        
+        if(Items){
+          batch.push(Items);
+          return res.status(200).send(batch);        
+        }
 
-    } catch (error) {
+    } catch (err) {
         console.log(err.message);
     res
       .status(ErrorCode.HTTP_SERVER_ERROR)
@@ -32,3 +37,4 @@ router.get('/expiry', async (req,res)=>{
 
 
 });
+export default router;
