@@ -1,9 +1,9 @@
 import React,{useState} from "react";
 import Navbar from "../Home/Navbar";
 import "./GeneralReport.css";
-import * as ReactBootstrap from "react-bootstrap";
-import Table from "../GeneralReport/Table";
+import {columns} from "../GeneralReport/Table";
 import {fetchItems} from '../../api/fetchitems';
+import DataTable from '../DataTable';
 const currDate = new Date().toLocaleDateString();
 const currTime = new Date().toLocaleTimeString();
 function GeneralReport() {
@@ -40,7 +40,7 @@ function GeneralReport() {
         <div class="change">
           <button> Change Selling Price or Discount </button>
         </div>
-        <Table title="Report Table" />
+        <DataTable title="Report Table" columns={columns}/>
       </div>
     </div>
   );

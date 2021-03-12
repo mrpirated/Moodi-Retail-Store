@@ -1,44 +1,30 @@
 import React from 'react'
 import Navbar from '../Home/Navbar';
-import * as ReactBootstrap from 'react-bootstrap';
-import Table from '../Expiryreport/Table';
+import {columns} from '../Expiryreport/Table';
+import DataTable from '../DataTable';
 const currDate=new Date().toLocaleDateString();
 const currTime=new Date().toLocaleTimeString(); 
 function Expiryreport() {
     return (
-        <div class="Report">
+        <div>
          <Navbar title="Expiry Report"/>
-
-<div classname="customer-form" >
+      <div style={{marginLeft:'10px',marginRight:'10px'}}>
      <button> General Report</button> 
      <button> GST Report</button> 
      <button> Expiry Report</button> 
      <button> Damaged Goods</button> 
-    <div className="Add">
-<p> Date : {currDate} ,Time:  {currTime}</p>
-</div>    
-<hr
-                style={{
-                    color: 'black',
-                    backgroundColor: 'gray',
-                    height: '1px',
-                    marginTop: '25px'
-                }}
-            />
-          <div class="search">
-              <h1>Expiry Date: <input type="text"></input></h1>
-                        </div>  
-                        <hr
-                style={{
-                    color: 'black',
-                    backgroundColor: 'gray',
-                    height: '1px',
-                    marginTop: '25px'
-                }}
-            />
-            <Table title='Report Table' />
+             <div style={{float:'right',marginTop:'10px',marginRight:'10px'}}>  Date : {currDate} ,Time:  {currTime}</div>
+             
+ 
+            <hr  className='hr-style'/>
+         
+             <p>Expiry Date: <input type="date"></input><button>Search</button></p>
+                        
+                        <hr  className='hr-style'/>
+               
+            <DataTable title='Report Table' columns={columns}/>
         </div>
-        </div>
+        </div>   
     )
 }
 
