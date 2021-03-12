@@ -29,14 +29,7 @@ function GeneralReport() {
             Date : {currDate} ,Time: {currTime}
           </p>
         </div>
-        <hr
-          style={{
-            color: "black",
-            backgroundColor: "gray",
-            height: "1px",
-            marginTop: "25px",
-          }}
-        />
+        <hr className='hr-styleS'/>
         <div class="change">
           <button> Change Selling Price or Discount </button>
         </div>

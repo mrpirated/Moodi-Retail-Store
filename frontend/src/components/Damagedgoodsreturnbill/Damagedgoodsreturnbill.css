@@ -43,3 +43,9 @@ button{
 .addproduct button{
     margin-left: 1200px;
 }
+.hr-style{
+    color: #d3d3d3;
+     background-color: #d3d3d3;
+     height: 2px;
+     margin-top: 25px;
+}

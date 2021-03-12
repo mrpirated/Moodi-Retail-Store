@@ -13,10 +13,11 @@ import SellBill from "./components/SellBill/SellBill";
 import Damagedgoodsreturnbill from "./components/Damagedgoodsreturnbill/Damagedgoodsreturnbill.js";
 import Customerreturn from "./components/Customerreturn/Customerreturn.js";
 import ExpiryReport from './components/Expiryreport/Expiryreport'
+
 function App() {
 	return (
 		<div className='App'>
-			<ExpiryReport/>
+			<Purchasebill/>
 		</div>
 	);
 }
