@@ -7,13 +7,13 @@ import DataTable from '../DataTable';
 const currDate = new Date().toLocaleDateString();
 const currTime = new Date().toLocaleTimeString();
 function GeneralReport() {
-    const [items,setItems]=useState([{}]);
-    const fetch=()=>{
-        const data = fetchItems();
-        console.log(data);
-        setItems(data);
-        console.log(items);
-    }
+    // const [items,setItems]=useState([{}]);
+    // const fetch=()=>{
+    //     const data = fetchItems();
+    //     console.log(data);
+    //     setItems(data);
+    //     console.log(items);
+    // }
   return (
     <div class="Report">
       <Navbar title="General Report" />

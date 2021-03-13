@@ -4,7 +4,6 @@ import {columns} from './Table';
 import DataTable from '../DataTable';
 import Input from '../Input';
 import Search from '../searchbar';
-//import InvoicePage from '../react-invoice-generator/react-invoice-generator-master/src/components/InvoicePage';
 const currDate=new Date().toLocaleDateString();
 const currTime=new Date().toLocaleTimeString(); 
 function SellBill(){
