@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import {useState} from "react";
 import Navbar from "../Home/Navbar";
 import "./GeneralReport.css";
 import {columns} from "../GeneralReport/Table";

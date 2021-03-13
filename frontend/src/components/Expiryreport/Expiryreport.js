@@ -1,4 +1,3 @@
-import React from 'react'
 import Navbar from '../Home/Navbar';
 import {columns} from '../Expiryreport/Table';
 import DataTable from '../DataTable';

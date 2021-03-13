@@ -1,4 +1,3 @@
-import React, { Component } from 'react'
 import Homecard from './Homecard';
 import { Cardlist } from './Cardlist';
 import '../../styles/homebody.css';

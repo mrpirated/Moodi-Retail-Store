@@ -1,4 +1,3 @@
-import React from 'react';
 import Navbar from '../Home/Navbar';
 import './Customerreturn.css';
 import {columns} from './Table';
@@ -24,10 +23,7 @@ function Customerreturn(){
         </div>    
             <hr className='hr-style'/>
             <div class="heading">
-            <h1> Bill No. : <input type="text" style={{
-                            marginRight:'5px',
-                            fontSize:'25px'
-                        }}></input></h1>
+            <h1> Bill No. :001</h1>
                         </div>
           <Search title='Search by Customer Name'/>
                    </div>

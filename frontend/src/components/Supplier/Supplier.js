@@ -1,4 +1,3 @@
-import React from 'react';
 import Navbar from '../Home/Navbar';
 import './Supplier.css';
 import {columns} from '../Supplier/Table';

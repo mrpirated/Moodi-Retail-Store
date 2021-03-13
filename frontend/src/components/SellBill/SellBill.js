@@ -1,10 +1,10 @@
-import React from 'react';
 import Navbar from '../Home/Navbar';
 import './SellBill.css';
 import {columns} from './Table';
 import DataTable from '../DataTable';
 import Input from '../Input';
 import Search from '../searchbar';
+//import InvoicePage from '../react-invoice-generator/react-invoice-generator-master/src/components/InvoicePage';
 const currDate=new Date().toLocaleDateString();
 const currTime=new Date().toLocaleTimeString(); 
 function SellBill(){
@@ -21,15 +21,10 @@ function SellBill(){
                 <div className="Add">
             <p> Date : {currDate} ,Time:  {currTime}</p>
         
-        </div>    
-        <hr className='hr-style'/>
-            <div class="heading">
-            <h1> Bill No. : <input type="text" style={{
-                            marginRight:'5px',
-                            fontSize:'25px'
-                        }}></input></h1>
-                        </div>
-                        <Search title='Customer Name'/>
+    </div>    
+              <hr className='hr-style'/>
+            <div class="heading"><h1> Bill No. : 001</h1></div>
+            <Search title='Customer Name'/>
             </div>
             <div class ="addc">
             <button> Add Customer</button>
@@ -47,7 +42,7 @@ function SellBill(){
             <h1>Total payment: <input type="text"></input></h1>
            <h1>Total Savings: <input type="text"></input></h1>
             <button> Pay</button>
-              <button> Generate </button>
+              <button > Generate </button>
    </div>
         </div>
     )

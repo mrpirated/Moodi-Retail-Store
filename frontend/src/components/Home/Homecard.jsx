@@ -1,4 +1,3 @@
-import React, { Component,useState } from 'react'
 import '../../styles/homecard.css';
 // import {fetchItems} from '../../api/fetchitems';
 function Homecard(props) {
