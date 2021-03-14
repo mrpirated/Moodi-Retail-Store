@@ -1,4 +1,5 @@
 import '../../styles/homecard.css';
+import { Link } from 'react-router-dom';
 // import {fetchItems} from '../../api/fetchitems';
 function Homecard(props) {
     // const [items,setItems] = useState([{}]);
@@ -8,16 +9,17 @@ function Homecard(props) {
     //    setItems(data);
     // }
     return (
-        <div>
+        <Link to={props.url}>
             <div className="features-col" style={{float:"left"}}>
+            
                 <i className= {props.iconClassName} style={{display:"block"}}></i>
-                <a className= {props.cName} href={props.url}>
+                <div className= {props.cName} >
                     {props.title}
-                </a>
+                </div>
                 
                 
             </div>
-        </div>
+        </Link>
         
     );
 }
