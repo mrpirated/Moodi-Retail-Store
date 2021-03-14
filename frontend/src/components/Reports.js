@@ -4,6 +4,7 @@ import GeneralReport from './GeneralReport/GeneralReport'
 import Gstreport from './Gstreport/Gstreport'
 import ExpiryReport from './Expiryreport/Expiryreport'
 import Damagedgood from './Damagedgood/Damagedgood'
+
 const currDate=new Date().toLocaleDateString();
 const currTime=new Date().toLocaleTimeString(); 
 
