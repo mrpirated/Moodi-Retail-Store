@@ -1,4 +1,5 @@
-    export const columns = [
+
+   export  const columns_returnable = [
         {
             title:'NO.', cellStyle: {
             width: 100,
@@ -27,6 +28,9 @@
             title:'Product Type', field:'productType'
         },
         {
+            title:'Transfer to Non-Returnable', field:'status'
+        },
+        {
             title:'Wt/Vol', field:'Wt/Vol'
         },
         {
@@ -45,6 +49,7 @@
         {
             title:'ExpiryDate', field:'expirydate'
         },
+       
     ]
 
   

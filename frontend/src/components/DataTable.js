@@ -1,6 +1,6 @@
 import MaterialTable from 'material-table';
 
-function DataTable(props) {
+export default function DataTable(props) {
     return (
         <div>
             <MaterialTable title={props.title}
@@ -15,5 +15,5 @@ function DataTable(props) {
     )
 }
 
-export default DataTable
+ 
 

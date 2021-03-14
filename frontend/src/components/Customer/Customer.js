@@ -1,11 +1,10 @@
-import React, { Component } from 'react';
 import Navbar from '../Home/Navbar';
 import  './customer.css';
 import  {columns} from './tablecolumns.js';
 import Input from '../Input';
 import DataTable from '../DataTable.js';
 import Search from '../searchbar';
-    function Customer() {
+export default  function Customer() {
         const details=[{field:'Name'},{field:'Phone Number'},{field:'Customer ID:'},{field:'Address:'},{field:'Email ID:'},{field:'Ledger:'}];
         return (
             <div>
@@ -25,4 +24,4 @@ import Search from '../searchbar';
         )
     }
     
-    export default Customer
+     

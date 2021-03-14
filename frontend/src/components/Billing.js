@@ -10,8 +10,7 @@ export default function Report() {
     const [data,setdata]=useState({
         display:<SellBill/>
     });
-    const {display}=data;
-               
+    const {display}=data;       
     return (
         <div>
             <Navbar title="Billing"/>

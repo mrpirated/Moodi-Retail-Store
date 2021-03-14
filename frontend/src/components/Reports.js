@@ -4,19 +4,16 @@ import GeneralReport from './GeneralReport/GeneralReport'
 import Gstreport from './Gstreport/Gstreport'
 import ExpiryReport from './Expiryreport/Expiryreport'
 import Damagedgood from './Damagedgood/Damagedgood'
-
 const currDate=new Date().toLocaleDateString();
 const currTime=new Date().toLocaleTimeString(); 
-
 export default function Report() {
     const [data,setdata]=useState({
         display:<GeneralReport/>
     });
-    const {display}=data;
-               
+    const {display}=data;            
     return (
         <div>
-            <Navbar title="Expiry Report"/>
+            <Navbar title="Reports"/>
             <div style={{marginLeft:'10px',marginRight:'10px'}}>
                 <button onClick={()=>setdata({...data,display:<GeneralReport/>})}> General Report</button> 
                 <button onClick={()=>setdata({...data,display:<Gstreport/>})}> GST Report</button> 

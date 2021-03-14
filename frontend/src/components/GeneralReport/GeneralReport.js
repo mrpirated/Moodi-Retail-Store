@@ -1,12 +1,7 @@
-import {useState} from "react";
-import Navbar from "../Home/Navbar";
 import "./GeneralReport.css";
 import {columns} from "../GeneralReport/Table";
-import {fetchItems} from '../../api/fetchitems';
 import DataTable from '../DataTable';
-const currDate = new Date().toLocaleDateString();
-const currTime = new Date().toLocaleTimeString();
-function GeneralReport() {
+export default function GeneralReport() {
     // const [items,setItems]=useState([{}]);
     // const fetch=()=>{
     //     const data = fetchItems();
@@ -16,27 +11,10 @@ function GeneralReport() {
     // }
   return (
     <div class="Report">
-      <Navbar title="General Report" />
-
-      <div classname="customer-form">
-        <button onClick={fetch}> General Report</button>
-        <button> GST Report</button>
-        <button> Expiry Report</button>
-        <button> Damaged Goods</button>
-        <div className="Add">
-          <p>
-            {" "}
-            Date : {currDate} ,Time: {currTime}
-          </p>
-        </div>
-        <hr className='hr-styleS'/>
-        <div class="change">
-          <button> Change Selling Price or Discount </button>
-        </div>
-        <DataTable title="Report Table" columns={columns}/>
-      </div>
-    </div>
+        <button> Change Selling Price or Discount </button>
+        <DataTable title="General Report" columns={columns}/>
+     </div>
   );
 }
 
-export default GeneralReport;
+ 

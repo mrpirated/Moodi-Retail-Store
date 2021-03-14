@@ -4,7 +4,7 @@ import {columns} from '../Supplier/Table';
 import DataTable from '../DataTable';
 import Search from '../searchbar';
 import Input from '../Input';
-function Supplier() {
+export default function Supplier() {
     const details=[{field:'Name'},{field:'Phone Number'},{field:'Supplier ID:'},{field:'GST Number'},{field:'Address:'},{field:'Email ID:'},{field:'Ledger:'}];
     return (
         <div>
@@ -23,4 +23,4 @@ function Supplier() {
         </div>
     )
 }
-export default Supplier
+ 
