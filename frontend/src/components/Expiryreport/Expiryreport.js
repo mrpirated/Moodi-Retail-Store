@@ -1,45 +1,12 @@
-import React from 'react'
-import Navbar from '../Home/Navbar';
-import * as ReactBootstrap from 'react-bootstrap';
-import Table from '../Expiryreport/Table';
-const currDate=new Date().toLocaleDateString();
-const currTime=new Date().toLocaleTimeString(); 
-function Expiryreport() {
+import {columns} from '../Expiryreport/Table';
+import DataTable from '../DataTable';
+export default function Expiryreport() {
     return (
-        <div class="Report">
-         <Navbar title="Expiry Report"/>
-
-<div classname="customer-form" >
-     <button> General Report</button> 
-     <button> GST Report</button> 
-     <button> Expiry Report</button> 
-     <button> Damaged Goods</button> 
-    <div className="Add">
-<p> Date : {currDate} ,Time:  {currTime}</p>
-</div>    
-<hr
-                style={{
-                    color: 'black',
-                    backgroundColor: 'gray',
-                    height: '1px',
-                    marginTop: '25px'
-                }}
-            />
-          <div class="search">
-              <h1>Expiry Date: <input type="text"></input></h1>
-                        </div>  
-                        <hr
-                style={{
-                    color: 'black',
-                    backgroundColor: 'gray',
-                    height: '1px',
-                    marginTop: '25px'
-                }}
-            />
-            <Table title='Report Table' />
-        </div>
-        </div>
+        <div>         
+             <p>Expiry Date: <input type="date"></input><button>Search</button></p>
+             <hr  className='hr-style'/>
+             <DataTable title='Expiry Report' columns={columns}/>
+        </div>  
     )
 }
-
-export default Expiryreport
+ 

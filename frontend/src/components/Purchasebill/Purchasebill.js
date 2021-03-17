@@ -1,151 +1,37 @@
-import React from 'react'
-import Navbar from '../Home/Navbar';
 import './Purchasebill.css'
-import * as ReactBootstrap from 'react-bootstrap';
-import Table from './Table';
-const currDate=new Date().toLocaleDateString();
-const currTime=new Date().toLocaleTimeString(); 
-function Purchasebill() {
+import {columns} from './Table';
+import DataTable from '../DataTable';
+import Input from '../Input';
+import Search from '../searchbar';
+export default function Purchasebill() {
+    const details=[{field:'Name'},{field:'Phone Number'},{field:'Supplier ID:'},{field:'GST Number'},{field:'Address:'},{field:'Email ID:'},{field:'Ledger:'}];
     return (
         <div class="Report">
-         <Navbar title="Purchase Billing"/>
-
-<div classname="customer-form" >
-     <button> Sell</button> 
-     <button> Customer Return </button> 
-     <button> Purchase</button>  
-     <button> Damaged goods for Bill</button> 
-    <div className="Add">
-<p> Date : {currDate} ,Time:  {currTime}</p>
-</div>    
-<hr
-                style={{
-                    color: 'black',
-                    backgroundColor: 'gray',
-                    height: '1px',
-                    marginTop: '25px'
-                }}
-
-            />
-             <div class="heading">
-            <h1> Bill No. : <input type="text" style={{
+            <div class="heading">
+                <h1> Bill No. : <input type="text" style={{
                             marginRight:'5px',
                             fontSize:'25px'
                         }}></input></h1>
-                        </div>
-            <div className="field" >
-                        <label classname="name-label-supplier" style={{
-                            paddingRight: '10px',
-                            fontSize: '30px',
-                            marginTop:'10px',
-                            fontWeight: 'bolder'
-                        }}>Supplier Name: </label>
-                        <input type="text" style={{
-                            marginRight: '10px',
-                            marginTop:'10px',
-                            height: '40px',
-                            width: '30rem',
-                            fontSize: '20px',
-                            //padding: '5px'
-                        }} />
-                    </div>
-                    <button style={{
-                        height: '40px',
-                        marginLeft: '780px',
-                        marginTop:'-100px',
-                        fontSize: '20px',
-                        //padding: '5px'
-                    }}>Get Details</button>
-<div style={{
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-                padding: '50px 0px 25px'
-            }}>
-                
-                <div>
-                    <label classname="name-label-supplier" style={{
-                                paddingRight:'10px'
-                            }}>Name: </label>
-                            <input type="text" style={{
-                                marginRight:'90px'
-                            }} />
-                </div>
-                <div>
-                    <label classname="name-label-supplier" style={{
-                        paddingRight:'10px'
-                    }}>Phone Number: </label>
-                    <input type="text" style={{
-                        marginRight:'90px'
-                    }} />
-                </div>
-                <div>
-                    <label classname="name-label-supplier" style={{
-                        paddingRight:'10px'
-                    }}>GST Number: </label>
-                    <input type="text" style={{
-                        marginRight:'90px'
-                    }} />
-                </div>
-                <div>
-                    <label classname="name-label-supplier" style={{
-                        paddingRight:'10px'
-                    }}>Supplier ID: </label>
-                    <input type="text" style={{
-                        marginRight:'90px'
-                    }} />
-                </div>
             </div>
-            <div style={{
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-                padding: '0px 0px 25px'
-            }}>
-                <div>
-                    <label classname="name-label-supplier" style={{
-                                paddingRight:'10px'
-                            }}>Address: </label>
-                            <input type="text" style={{
-                                marginRight:'90px'
-                            }} />
-                </div>
-                <div>
-                    <label classname="name-label-supplier" style={{
-                                paddingRight:'10px'
-                            }}>Email ID: </label>
-                            <input type="text" style={{
-                                marginRight:'90px'
-                            }} />
-                </div>
-                <div>
-                    <label classname="name-label-supplier" style={{
-                                paddingRight:'10px'
-                            }}>Ledger: </label>
-                            <input type="text" style={{
-                                marginRight:'90px'
-                            }} />
-                </div>
+            <Search title='Supplier Name'/>
+            <div className="details" >
+                 {details.map((item) => {
+                            return (
+                               <Input field={item.field}/>
+                            )
+                        })}
             </div>
-            <hr
-                style={{
-                    color: '#d3d3d3',
-                    backgroundColor: '#d3d3d3',
-                    height: '2px',
-                    marginTop: '25px'
-                }}
-                />
-                <div class="addproduct">
+            <hr classname='hr-style'/>
+            <div class="addproduct">
                 <button> Add Product</button></div>
                 
-            <Table title='Purchase Bill Table' />
+            <DataTable title='Purchase Bill Table' columns={columns} />
             <h1>Total payment: <input type="text"></input></h1>
             <button> Pay</button>
             <button>Print Barcode</button>
 
         </div>
-        </div>
     )
 }
 
-export default Purchasebill
+ 

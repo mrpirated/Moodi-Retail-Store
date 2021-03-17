@@ -48,3 +48,11 @@ margin-top: -500px;
 .payment h1{
     margin-left: 200px;
 }
+.hr-style{
+ 
+    color: black;
+    background-color: gray;
+    height: 1px;
+    margin-top: 25px;
+
+}

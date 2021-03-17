@@ -1,4 +1,3 @@
-import React, { Component, useState } from 'react'
 import { MenuItems } from './MenuItems';
 import '../../styles/navbar.css';
 
