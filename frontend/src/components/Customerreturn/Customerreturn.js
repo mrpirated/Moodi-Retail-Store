@@ -14,13 +14,13 @@
                 <div className="details" >
                         {details.map((item, index) => {
                                     return (
-                                    <Input field={item.field} />
+                                    <Input field={item.field} key={index}/>
                                     )
                                 })}
                 </div>
                 <hr className='hr-style'/>
-                <DataTable title='Customer Return Billing' columns={columns}/>
-                <div class="bottom"> 
+                {/* <DataTable title='Customer Return Billing' columns={columns}/> */}
+                <div className="bottom"> 
                    <h1>Return payment: <input type="text"></input></h1>
                    <button> Generate </button>
                 </div>

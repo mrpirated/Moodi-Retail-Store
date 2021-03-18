@@ -14,12 +14,12 @@ export default  function Customer() {
                 <div className="details" >
                     {details.map((item, index) => {
                                 return (
-                                <Input field={item.field} />
+                                <Input field={item.field} key={index}/>
                                 )
                             })}
                 </div>
                 <hr className="hr-style"/>
-                <DataTable title='Customer Table' col={columns}/>
+                <DataTable title='Customer Table' columns={columns}/>
             </div>
         )
     }

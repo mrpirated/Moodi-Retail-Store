@@ -1,8 +1,9 @@
 import MaterialTable from 'material-table';
+import React from 'react';
 
 export default function DataTable(props) {
     return (
-        <div>
+        <React.Fragment>
             <MaterialTable title={props.title}
                // data={data}
                 columns={props.columns}
@@ -11,7 +12,7 @@ export default function DataTable(props) {
                     exportButton: true
                 }}
             />
-        </div>
+        </React.Fragment>
     )
 }
 

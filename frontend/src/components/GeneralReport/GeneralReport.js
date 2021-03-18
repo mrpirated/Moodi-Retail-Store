@@ -10,7 +10,7 @@ export default function GeneralReport() {
     //     console.log(items);
     // }
   return (
-    <div class="Report">
+    <div className="Report">
         <button> Change Selling Price or Discount </button>
         <DataTable title="General Report" columns={columns}/>
      </div>
