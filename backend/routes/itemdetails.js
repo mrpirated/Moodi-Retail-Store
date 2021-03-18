@@ -43,7 +43,7 @@ router.get("/items", async (req, res) => {
 	}
 	try {
 		const { UserId } = req.query;
-		console.log(req.query);
+		//console.log(req.query);
 		//console.log(UserId);
 		let item = await Items.find({ UserId });
 		if (item) {

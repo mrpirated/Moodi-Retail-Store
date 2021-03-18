@@ -52,7 +52,7 @@ export default function GeneralReport() {
 	}
 
 	return (
-		<div class='Report'>
+		<div className='Report'>
 			{/* {() => callAPI()} */}
 			<button onClick={() => callAPI()}> Refresh </button>
 			<DataTable title='General Report' columns={columns} data={data} />
