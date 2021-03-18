@@ -25,7 +25,7 @@ export default function Purchasebill() {
             <div className="addproduct">
                 <button> Add Product</button></div>
                 
-            {/* <DataTable title='Purchase Bill Table' columns={columns} /> */}
+            <DataTable title='Purchase Bill Table' columns={columns} />
             <h1>Total payment: <input type="text"></input></h1>
             <button> Pay</button>
             <button>Print Barcode</button>
