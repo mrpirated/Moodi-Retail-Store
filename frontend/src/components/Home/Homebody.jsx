@@ -2,7 +2,7 @@ import Homecard from './Homecard';
 import { Cardlist } from './Cardlist';
 import '../../styles/homebody.css';
 
-export default function Homebody(){
+export default function Homebody(){ 
     return (
         <div className="home-cards">
             {/* <section> */}
@@ -10,7 +10,7 @@ export default function Homebody(){
                     {
                         Cardlist.map((item, index) => {
                             return (
-                                <Homecard title={item.title} idName={item.idName} cName={item.cName} url={item.url} iconClassName={item.iconClassName}/>
+                                <Homecard key = {index} title={item.title} idName={item.idName} cName={item.cName} url={item.url} iconClassName={item.iconClassName}/>
                             )
                         })
                     }

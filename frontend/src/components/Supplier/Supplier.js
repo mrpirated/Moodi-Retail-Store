@@ -14,7 +14,7 @@ export default function Supplier() {
              <div className="details" >
                  {details.map((item, index) => {
                             return (
-                               <Input field={item.field}/>
+                               <Input field={item.field} key={index}/>
                             )
                         })}
                 </div>

@@ -9,7 +9,7 @@ export default   function Damagedgood() {
         columns:columns_returnable,
     });      
         return (
-            <div class="Report">           
+            <div className="Report">           
                     <button > Enter Physical Damage</button>  
                     <button onClick={()=>setdata({...data,title:'Returnable Report Table', columns:columns_returnable,})}>Returnable</button>
                     <button onClick={()=>setdata({...data,title:'Non-Returnable Report Table',columns:columns_nonreturnable,})}>Non-Returnable</button>
