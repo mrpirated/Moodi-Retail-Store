@@ -47,7 +47,7 @@ router.get("/items", async (req, res) => {
 		//console.log(UserId);
 		let item = await Items.find({ UserId });
 		if (item) {
-			console.log(JSON.stringify(item));
+			//console.log(JSON.stringify(item));
 			return res.status(200).json(item);
 		} else {
 			return res.status(200).send("Item not found");
