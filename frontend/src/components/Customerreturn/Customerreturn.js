@@ -19,7 +19,7 @@
                                 })}
                 </div>
                 <hr className='hr-style'/>
-                {/* <DataTable title='Customer Return Billing' columns={columns}/> */}
+                <DataTable title='Customer Return Billing' columns={columns}/>
                 <div className="bottom"> 
                    <h1>Return payment: <input type="text"></input></h1>
                    <button> Generate </button>

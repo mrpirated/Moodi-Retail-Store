@@ -19,7 +19,7 @@ export default function Damagedgoodsreturnbill() {
                             })}
                 </div>
                 <hr className='hr-style'/>
-                {/* <DataTable title='Damaged Goods Return Table' columns={columns} /> */}
+                <DataTable title='Damaged Goods Return Table' columns={columns} />
                 <h1>Total Money Return: <input type="text"></input></h1>
                 <button> Generate </button>
             </div>
