@@ -8,8 +8,13 @@ const config = require("../../config/apipaths.json");
 export default function GeneralReport() {
 	const [items, setItems] = useState([{}]);
 	const [data, setData] = useState([{}]);
-	useEffect(async () => {
-		await axios
+
+	useEffect(() => {
+		callAPI();
+	}, []);
+
+	function callAPI() {
+		axios
 			.get(config.fetchItems, {
 				params: {
 					UserId: "4584548524",
@@ -33,7 +38,7 @@ export default function GeneralReport() {
 						total: items[i].Total_Units,
 					};
 					temp.push(t);
-					console.log(temp);
+					//console.log(temp);
 				}
 				//console.log(temp);
 				setData(temp);
@@ -44,11 +49,12 @@ export default function GeneralReport() {
 				console.log(err);
 			});
 		//setItems(result.data);
-	}, []);
+	}
 
 	return (
 		<div class='Report'>
-			<button> Change Selling Price or Discount </button>
+			{/* {() => callAPI()} */}
+			<button onClick={() => callAPI()}> Refresh </button>
 			<DataTable title='General Report' columns={columns} data={data} />
 		</div>
 	);
