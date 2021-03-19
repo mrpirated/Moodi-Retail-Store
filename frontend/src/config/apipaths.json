@@ -1,4 +1,5 @@
 {
     "fetchItems":"http://localhost:5000/user/items",
-    "supplierDetails":"http://localhost:5000/user/supplier"
+    "supplierDetails":"http://localhost:5000/user/supplier",
+    "customerDetails":"http://localhost:5000/user/customer"
 }
