@@ -4,9 +4,10 @@ import '../../styles/homebody.css';
 
 export default function Homebody(){ 
     return (
-        <div className="home-cards">
-            {/* <section> */}
-                {/* <div> */}
+        <div style={{ 
+            position: 'absolute', left: '50%', top: '50%',
+            transform: 'translate(-50%, -50%)'
+        }}>
                     {
                         Cardlist.map((item, index) => {
                             return (
@@ -14,10 +15,9 @@ export default function Homebody(){
                             )
                         })
                     }
-                {/* </div> */}
-            {/* </section> */}
         </div>
-
+    );
+}
         /*<div>
             <div class="row">
                 <div class="col-lg-4 col-md-12 col-md-12 features-col">
@@ -49,5 +49,3 @@ export default function Homebody(){
             </div>
         </div>*/
         
-    );
-}
