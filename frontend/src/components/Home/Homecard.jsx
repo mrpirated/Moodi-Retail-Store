@@ -10,7 +10,7 @@ function Homecard(props) {
     // }
     return (
         <Link to={props.url}>
-            <div className="features-col" style={{float:"left"}}>
+            <div className="features-col" style={{float:"left",marginLeft:'80px',marginRight:'80px'}}>
             
                 <i className= {props.iconClassName} style={{display:"block"}}></i>
                 <div className= {props.cName} >
