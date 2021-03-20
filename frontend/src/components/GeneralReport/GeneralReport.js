@@ -50,12 +50,20 @@ export default function GeneralReport() {
 			});
 		//setItems(result.data);
 	}
-
+	const actions=[
+		{
+		  icon: 'save',
+		  tooltip: 'Save User',
+		  onClick: (event, rowData) => {
+			// Do save operation
+		  }
+		},
+	  ]
 	return (
 		<div className='Report'>
 			{/* {() => callAPI()} */}
 			<button onClick={() => callAPI()}> Refresh </button>
-			<DataTable title='General Report' columns={columns} data={data} />
+			<DataTable title='General Report' columns={columns} data={data} actions={actions}/>
 		</div>
 	);
 }
