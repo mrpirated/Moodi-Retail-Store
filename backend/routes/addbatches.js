@@ -29,7 +29,6 @@ router.post("/addbatch", async (req, res) => {
 			SGST,
 			IGST,
 			Expiry,
-			Discount,
 		} = req.body;
 		const Batch_Id = generatecode();
 		let batch = new batches({
@@ -46,19 +45,25 @@ router.post("/addbatch", async (req, res) => {
 			SGST: SGST,
 			IGST: IGST,
 			Expiry: Expiry,
-			Discount: Discount,
 		});
 		batch.save();
-
+		console.log(Quantity);
 		// ==========Updating releted field============
-		let result = item.updateOne(
-			{ _id: ItemCode },
+		item.findByIdAndUpdate(
+			ItemCode,
 			{
-				$inc: { Total_Units: Quantity },
-				$push: { Batches: Batch_Id },
+				$inc: { Total_Units: Quantity, Batches: 1 },
+				//$inc: { Batches: 1 },
+			},
+			(err, docs) => {
+				if (err) {
+					console.log(err);
+				} else {
+					console.log("Updated User : ", docs);
+				}
 			}
 		);
-		console.log(result);
+		//console.log(result);
 
 		return res.status(200).send(batch);
 	} catch (err) {

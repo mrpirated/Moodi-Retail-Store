@@ -78,8 +78,8 @@ export const columns = [
 		title: "Total",
 		field: "total",
 	},
-	{
-		title: "ItemCode",
-		field: "itemcode",
-	},
+	// {
+	// 	title: "ItemCode",
+	// 	field: "itemcode",
+	// },
 ];
