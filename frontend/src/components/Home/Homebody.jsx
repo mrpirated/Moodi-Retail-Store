@@ -5,7 +5,7 @@ import '../../styles/homebody.css';
 export default function Homebody(){ 
     return (
         <div style={{ 
-            position: 'absolute', left: '50%', top: '50%',
+            position: 'relative', left: '50%', top: '50%',bottom:'20%',right:'50%',
             transform: 'translate(-50%, -50%)'
         }}>
                     {

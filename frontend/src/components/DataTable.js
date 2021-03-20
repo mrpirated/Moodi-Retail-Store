@@ -8,6 +8,7 @@ export default function DataTable(props) {
 				title={props.title}
 				data={props.data}
 				columns={props.columns}
+				//onRowClick={console.log("fae")}
 				options={{
 					// filtering: true,
 					exportButton: true,

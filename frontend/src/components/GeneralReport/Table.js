@@ -1,3 +1,5 @@
+import { Button, IconButton, Link } from "@material-ui/core";
+
 export const columns = [
 	// {
 	// 	cellStyle: {
@@ -17,7 +19,15 @@ export const columns = [
 	{
 		title: "Batches",
 		field: "batch",
+
+		// render: () => {
+		// 	<Button >Button</Button>;
+		// },
+		// render: (rowdata) => {
+		// 	<Link to='/'>view</Link>;
+		// },
 	},
+
 	{
 		title: "Category",
 		field: "category",

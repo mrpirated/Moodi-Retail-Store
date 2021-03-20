@@ -11,25 +11,15 @@
 .home-cards {
   margin-top: 10rem;
   margin-left: 10rem;
+  margin-bottom: 10rem;
   background-color: white;
   text-align: center;
   width: 1200px;
   clear: both;
 }
 
+
 #first {
-  width: 300px;
-  float: left;
-}
-#second {
-  width: 300px;
-  float: left;
-}
-#third {
-  width: 300px;
-  float: left;
-}
-#fourth {
   width: 300px;
   float: left;
 }
