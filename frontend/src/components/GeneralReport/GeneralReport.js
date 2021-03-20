@@ -1,20 +1,18 @@
 import "./GeneralReport.css";
+import { useHistory } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { columns } from "../GeneralReport/Table";
+import Batches from "./Batches";
 import DataTable from "../DataTable";
 const config = require("../../config/apipaths.json");
 //import { fetchItems } from "../../api/fetchitems";
 export default function GeneralReport() {
 	const [items, setItems] = useState([{}]);
 	const [data, setData] = useState([{}]);
-
-	useEffect(() => {
-		callAPI();
-	}, []);
-
-	function callAPI() {
-		axios
+	const history = useHistory();
+	useEffect(async () => {
+		const result = await axios
 			.get(config.fetchItems, {
 				params: {
 					UserId: "4584548524",
@@ -23,24 +21,25 @@ export default function GeneralReport() {
 			.then((res) => {
 				//console.log("frae");
 				//console.log(res.data);
-				setItems(res.data);
+				//setItems(res.data);
 				let temp = [];
 				//console.log(items[0].Line);
-				for (let i = 0; i < items.length; i++) {
+				for (let i = 0; i < res.data.length; i++) {
 					let t = {
-						batch: items[i].Batches.length,
+						batch: res.data[i].Batches.length,
 						num: i + 1,
-						category: items[i].Line,
+						category: res.data[i].Line,
 						//barcode:items.Batches[0],
-						company: items[i].Company,
-						productType: items[i].Type,
-						WtVol: items[i].Weight_Volume,
-						total: items[i].Total_Units,
+						company: res.data[i].Company,
+						productType: res.data[i].Type,
+						WtVol: res.data[i].Weight_Volume,
+						total: res.data[i].Total_Units,
+						itemcode: res.data[i]._id,
 					};
 					temp.push(t);
 					//console.log(temp);
 				}
-				//console.log(temp);
+				//console.log("Here");
 				setData(temp);
 				//data=res.data;
 				//console.log(data);
@@ -48,22 +47,65 @@ export default function GeneralReport() {
 			.catch((err) => {
 				console.log(err);
 			});
-		//setItems(result.data);
-	}
-	const actions=[
+	}, []);
+
+	// function callAPI() {
+	// 	axios
+	// 		.get(config.fetchItems, {
+	// 			params: {
+	// 				UserId: "4584548524",
+	// 			},
+	// 		})
+	// 		.then((res) => {
+	// 			//console.log("frae");
+	// 			//console.log(res.data);
+	// 			//setItems(res.data);
+	// 			let temp = [];
+	// 			//console.log(items[0].Line);
+	// 			for (let i = 0; i < res.data.length; i++) {
+	// 				let t = {
+	// 					batch: res.data[i].Batches.length,
+	// 					num: i + 1,
+	// 					category: res.data[i].Line,
+	// 					//barcode:items.Batches[0],
+	// 					company: res.data[i].Company,
+	// 					productType: res.data[i].Type,
+	// 					WtVol: res.data[i].Weight_Volume,
+	// 					total: res.data[i].Total_Units,
+	// 					itemcode: res.data[i]._id,
+	// 				};
+	// 				temp.push(t);
+	// 				console.log(res.data[i]);
+	// 			}
+	// 			//console.log(temp);
+	// 			setData(temp);
+	// 			//data=res.data;
+	// 			//console.log(data);
+	// 		})
+	// 		.catch((err) => {
+	// 			console.log(err);
+	// 		});
+	// 	//setItems(result.data);
+	// }
+	const actions = [
 		{
-		  icon: 'save',
-		  tooltip: 'Save User',
-		  onClick: (event, rowData) => {
-			// Do save operation
-		  }
+			icon: "more",
+			tooltip: "More Details",
+			onClick: (event, rowData) => {
+				history.push("/batches", { rowData: rowData });
+			},
 		},
-	  ]
+	];
 	return (
 		<div className='Report'>
 			{/* {() => callAPI()} */}
-			<button onClick={() => callAPI()}> Refresh </button>
-			<DataTable title='General Report' columns={columns} data={data} actions={actions}/>
+			{/* <button onClick={() => callAPI()}> Refresh </button> */}
+			<DataTable
+				title='General Report'
+				columns={columns}
+				data={data}
+				actions={actions}
+			/>
 		</div>
 	);
 }

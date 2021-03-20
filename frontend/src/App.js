@@ -3,6 +3,7 @@ import Home from "./components/Home/Home.jsx";
 import Supplier from "./components/Supplier/Supplier";
 import Customer from "./components/Customer/Customer";
 import Billing from "./components/Billing";
+import Batches from "./components/GeneralReport/Batches";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Report from "./components/Reports";
 export default function App() {
@@ -16,6 +17,7 @@ export default function App() {
 						<Route exact path='/supplier' component={Supplier} />
 						<Route exact path='/reports' component={Report} />
 						<Route exact path='/billing' component={Billing} />
+						<Route exact path='/batches' component={Batches} />
 					</Switch>
 				</section>
 			</div>

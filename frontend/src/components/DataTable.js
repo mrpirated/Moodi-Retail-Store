@@ -7,8 +7,8 @@ export default function DataTable(props) {
 			<MaterialTable
 				title={props.title}
 				data={props.data}
-				actions={props.actions}
 				columns={props.columns}
+				actions={props.actions}
 				//onRowClick={console.log("fae")}
 				options={{
 					// filtering: true,

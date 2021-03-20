@@ -78,9 +78,12 @@ router.get("/getbatch", async (req, res) => {
 			.send("Error in Validation");
 	}
 	try {
-		const { Date, ItemCode, UserId } = req.body;
-		let batch = await batches.findOne({ Date, ItemCode, UserId });
+		const { ItemCode, UserId } = req.query;
+		let batch = await batches.find({ ItemCode, UserId });
+		//console.log("sdf");
 		if (batch) {
+			//console.log(batch);
+			//console.log(batch);
 			return res.status(200).send(batch);
 		} else {
 			return res.status(200).send("Batch not found");

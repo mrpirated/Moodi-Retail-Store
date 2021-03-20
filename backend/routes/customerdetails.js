@@ -15,16 +15,16 @@ router.get("/customer", async (req, res) => {
 			.send("Error in Validation");
 	}
 	try {
-		const { UserId, Name } = req.query;
+		const { UserId } = req.query;
 		//console.log(UserId);
-		let customer = await Customer.findOne({ UserId, Name });
+		let customer = await Customer.find({ UserId });
 		//console.log(customer);
 		if (customer) {
-			let transactions = bill
-				.find({ Client_id: customer.Customer_Id })
-				.sort({ date: -1 })
-				.limit(10);
-			customer.transactions = transactions;
+			// let transactions = bill
+			// 	.find({ Client_id: customer.Customer_Id })
+			// 	.sort({ date: -1 })
+			// 	.limit(10);
+			// customer.transactions = transactions;
 			return res.status(200).send(customer);
 		} else {
 			return res.status(200).send("Customer details not found");

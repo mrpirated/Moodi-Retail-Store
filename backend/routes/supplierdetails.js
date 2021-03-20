@@ -13,15 +13,15 @@ router.get("/supplier", async (req, res) => {
 		// .send("Error in Validation");
 	}
 	try {
-		const { UserId, Name } = req.query;
+		const { UserId } = req.query;
 		let supplier = await Supplier.find({ UserId });
 		if (supplier) {
-			let transactions = bill
-				.find({ Client_id: supplier.Supplier_Id })
-				.sort({ date: -1 })
-				.limit(10);
-			supplier.transactions = transactions;
-			console.log(supplier);
+			// let transactions = bill
+			// 	.find({ Client_id: supplier.Supplier_Id })
+			// 	.sort({ date: -1 })
+			// 	.limit(10);
+			// supplier.transactions = transactions;
+			//console.log(supplier);
 			return res.status(200).send(supplier);
 		} else {
 			return res.status(200).send("Supplier details not found");
