@@ -8,6 +8,7 @@ import supplierdetails from './routes/supplierdetails';
 import generalreport from './routes/generalreport';
 import expiryreport from './routes/expiryreport';
 import billing from './routes/billing';
+import printBill from './routes/printBill';
 import config from 'config';
 import cors from 'cors';
 import generatecode from './controllers/generatebarcode';
@@ -32,7 +33,7 @@ app.get('/', (req, res) => {
 //**********************************Routes**********************************/
 app.use('/api/user', auth);
 app.use('/user',itemdetails ,addbatch,customerdetails,supplierdetails,generalreport,expiryreport);
-app.use('/user',billing);
+app.use('/user',billing,printBill);
 // app.use('/user',addbatch);
 // app.use('/user/customer',customerdetails);
 // app.use('/user/supplier',supplierdetails);

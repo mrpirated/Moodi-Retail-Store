@@ -7,7 +7,7 @@ import item from '../models/Item';
 import supplier from '../models/supplier';
 import customer from '../models/Customer';
 import { Mongoose } from "mongoose";
-import generatecode from "../controllers/generatebarcode";
+import generatecode from "../controllers/generatebillno";
 
 router.post('/sale', async(req,res)=>{
     const errors = validationResult(req);
